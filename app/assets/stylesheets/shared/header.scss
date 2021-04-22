@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  white-space: nowrap;
 }
 
 .quest-icon {
@@ -44,24 +45,40 @@
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
+  color: rgb(173, 84, 32);
   font-weight: bold;
+  border: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  background-color: chartreuse;
 }
 
 
 .logout {
   text-decoration: none;
-  color: #333333;
+  color: rgb(173, 84, 32);
+  border: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  background-color: chartreuse;
 }
 
 .login {
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
-  color: #2d914e;
+  color: rgb(173, 84, 32);
+  border: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  background-color: chartreuse;
 }
 
 .sign-up {
   text-decoration: none;
-  color: #2d914e;
+  color: rgb(173, 84, 32);
+  border: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  background-color: chartreuse;
 }
