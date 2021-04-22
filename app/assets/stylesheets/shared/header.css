@@ -3,8 +3,9 @@
 }
 
 .top-page-header {
-  /* background-image: url('../../images/wood-texture_06.png'); */
-  background-color: rgb(68, 190, 150);
+  /* background: url('../../images/wood-texture-06.png') center / cover; */
+  background-image: url('../../images/wood-texture-06.png');
+  /* background-color: rgb(68, 190, 150); */
   width: 100vw;
   padding: 2vh 5vw;
   display: flex;
