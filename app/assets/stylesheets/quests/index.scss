@@ -83,9 +83,9 @@ p {
 
 .home-text2 {
   text-align: center;
-  background-image: image-url('door.png');
+  background-image: image-url('door2.png');
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: right 50% top 100px;
   background-color: rgba(255, 235, 205, 0.788);
   width: 100vw;
   padding-top: 20px;
@@ -102,4 +102,35 @@ p {
   0px  2px 6px #990000,
   -2px  0px 6px #990000,
   0px -2px 6px #990000;
+}
+
+.h2-tag2 {
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+
+p span {
+  position: relative;
+  background: linear-gradient(transparent 40%, rgb(89, 0, 255) 40%);
+}
+
+p.arrow-mark {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.h3-text {
+  display        : inline-block;
+  color          : #ff66ff;            /* 文字の色 */
+  font-size      : 24pt;               /* 文字のサイズ */
+  text-shadow    : 
+       3px  3px 1px #ffff1a,
+      -3px  3px 1px #ffff1a,
+       3px -3px 1px #ffff1a,
+      -3px -3px 1px #ffff1a,
+       3px  0px 1px #ffff1a,
+       0px  3px 1px #ffff1a,
+      -3px  0px 1px #ffff1a,
+       0px -3px 1px #ffff1a;        /* 文字の影 */
 }
