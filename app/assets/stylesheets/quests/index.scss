@@ -2,20 +2,6 @@ a {
   text-decoration: none;
 }
 
-h2 {
-  text-align: center;
-  letter-spacing : 8px;
-  text-shadow    : 
-       4px  4px 5px #ffffff,
-      -4px  4px 5px #ffffff,
-       4px -4px 5px #ffffff,
-      -4px -4px 5px #ffffff,
-       4px  0px 5px #ffffff,
-       0px  4px 5px #ffffff,
-      -4px  0px 5px #ffffff,
-       0px -4px 5px #ffffff;
-}
-
 p {
   text-align: center;
 }
@@ -27,6 +13,17 @@ p {
 
 .h2-tag {
   margin-top: 0;
+  text-align: center;
+  letter-spacing : 8px;
+  text-shadow    : 
+       4px  4px 5px #ffffff,
+      -4px  4px 5px #ffffff,
+       4px -4px 5px #ffffff,
+      -4px -4px 5px #ffffff,
+       4px  0px 5px #ffffff,
+       0px  4px 5px #ffffff,
+      -4px  0px 5px #ffffff,
+       0px -4px 5px #ffffff;
 }
 
 .home_text1 {
@@ -85,6 +82,7 @@ p {
 }
 
 .home-text2 {
+  text-align: center;
   background-image: image-url('door.png');
   background-repeat: no-repeat;
   background-position: top center;
