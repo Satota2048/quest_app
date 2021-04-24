@@ -9,6 +9,22 @@
   display: flex;
 }
 
+.morning {
+  background-image: image-url('morning_sky.jpeg');
+}
+
+.noon {
+  background-image: image-url('noon_sky.png');
+}
+
+.afternoon {
+  background-image: image-url('afternoon_sky.png');
+}
+
+.night {
+  background-image: image-url('night_sky.png');
+}
+
 .search-bar-contents {
   display: flex;
   justify-content: space-between;

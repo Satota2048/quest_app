@@ -5,3 +5,11 @@
 //     $(this).css({ "color": "" });
 //   })
 // });
+$(function(){
+  //朝、昼、夕、夜の時間判定処理
+  var getH = new Date().getHours();
+  if((getH >= 5) && (getH < 10)) { $('.top-page-header').removeClass('night').addClass('morning'); }
+  else if( (getH >= 10) && (getH < 16) ) { $('.top-page-header').removeClass('morning').addClass('noon'); }
+  else if( (getH >= 16) && (getH < 18) ) { $('.top-page-header').removeClass('noon').addClass('afternoon'); }
+  else if( (getH >= 18) || (getH < 5) ) { $('.top-page-header').removeClass('afternoon').addClass('night'); }
+  });
