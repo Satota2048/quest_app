@@ -2,8 +2,27 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  text-align: center;
+  letter-spacing : 8px;
+  text-shadow    : 
+       4px  4px 5px #ffffff,
+      -4px  4px 5px #ffffff,
+       4px -4px 5px #ffffff,
+      -4px -4px 5px #ffffff,
+       4px  0px 5px #ffffff,
+       0px  4px 5px #ffffff,
+      -4px  0px 5px #ffffff,
+       0px -4px 5px #ffffff;
+}
+
+p {
+  text-align: center;
+}
+
 .main {
   background: #f8f8f8;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','American Typewriter',sans-serif;
 }
 
 .h2-tag {
@@ -11,34 +30,78 @@ a {
 }
 
 .home_text1 {
-  text-align: center;
   width: 100vw;
   background-image: image-url('wood-texture-06.png');
   margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-shadow    : 
+  2px  2px 1px #ffffff,
+ -2px  2px 1px #ffffff,
+  2px -2px 1px #ffffff,
+ -2px -2px 1px #ffffff,
+  2px  0px 1px #ffffff,
+  0px  2px 1px #ffffff,
+ -2px  0px 1px #ffffff,
+  0px -2px 1px #ffffff;        /* 文字の影 */
 }
 
-.image-bord1 {
-  height: 200px;
+.image-board1 {
+  display: flex;
+  justify-content: center;
+}
+
+.image-list1 {
+  height: 120px;
+  width: 120px;
+  margin: 30px;
+}
+
+.image-list2 {
+  height: 120px;
+  width: 120px;
+  margin: 30px;
+}
+
+.image-board2 {
+  height: 150px;
   width: 100vw;
-  background-color:white;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 30px;
 }
 
-.image-list {
-  height: 150px;
-  width: 150px;
-  margin-right: 40px;
+.image-list3 {
+  height: 120px;
+  width: 120px;
+  margin: 30px;
+}
+
+.image-list4 {
+  height: 120px;
+  width: 120px;
+  margin: 30px;
 }
 
 .home-text2 {
-  text-align: center;
+  background-image: image-url('door.png');
+  background-repeat: no-repeat;
+  background-position: top center;
   background-color: rgba(255, 235, 205, 0.788);
   width: 100vw;
   padding-top: 20px;
   padding-bottom: 20px;
+  display        : inline-block;
+  color          : #ffffff;            /* 文字の色 */
+  letter-spacing : 4px;                /* 文字間 */
+  text-shadow    : 
+  2px  2px 6px #990000,
+  -2px  2px 6px #990000,
+  2px -2px 6px #990000,
+  -2px -2px 6px #990000,
+  2px  0px 6px #990000,
+  0px  2px 6px #990000,
+  -2px  0px 6px #990000,
+  0px -2px 6px #990000;        /* 文字の影 */
 }
