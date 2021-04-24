@@ -6,7 +6,6 @@
 //   })
 // });
 $(function(){
-  //朝、昼、夕、夜の時間判定処理
   var getH = new Date().getHours();
   if((getH >= 5) && (getH < 10)) { $('.top-page-header').removeClass('night').addClass('morning'); }
   else if( (getH >= 10) && (getH < 16) ) { $('.top-page-header').removeClass('morning').addClass('noon'); }
