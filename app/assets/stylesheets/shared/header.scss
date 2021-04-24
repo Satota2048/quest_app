@@ -7,6 +7,15 @@
   width: 100vw;
   padding: 2vh 5vw;
   display: flex;
+  text-shadow    : 
+  2px  2px 1px #ffffff,
+ -2px  2px 1px #ffffff,
+  2px -2px 1px #ffffff,
+ -2px -2px 1px #ffffff,
+  2px  0px 1px #ffffff,
+  0px  2px 1px #ffffff,
+ -2px  0px 1px #ffffff,
+  0px -2px 1px #ffffff;
 }
 
 .morning {
