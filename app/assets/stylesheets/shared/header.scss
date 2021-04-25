@@ -3,16 +3,61 @@
 }
 
 .top-page-header {
-  background-image: image-url('wood-texture-06.png');
+  height: 300px;
   width: 100vw;
   padding: 2vh 5vw;
   display: flex;
+  text-shadow    : 
+  2px  2px 1px #ffffff,
+ -2px  2px 1px #ffffff,
+  2px -2px 1px #ffffff,
+ -2px -2px 1px #ffffff,
+  2px  0px 1px #ffffff,
+  0px  2px 1px #ffffff,
+ -2px  0px 1px #ffffff,
+  0px -2px 1px #ffffff;
+}
+
+.morning {
+  background-image: image-url('morning_sky.jpeg');
+}
+
+.morning2 {
+  background-image: image-url('morning_sky2.jpeg');
+}
+
+.noon {
+  background-image: image-url('noon_sky.png');
+}
+
+.noon2 {
+  background-image: image-url('noon_sky2.png');
+}
+
+.afternoon {
+  background-image: image-url('afternoon_sky.png');
+}
+
+.afternoon2 {
+  background-image: image-url('afternoon_sky2.jpeg');
+}
+
+.night {
+  background-image: image-url('night_sky.jpeg');
+}
+
+.night2 {
+  background-image: image-url('night_sky2.jpeg');
+}
+
+.night3 {
+  background-image: image-url('night_sky3.jpeg');
 }
 
 .search-bar-contents {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  white-space: nowrap;
 }
 
 .quest-icon {
@@ -44,24 +89,40 @@
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
+  color: rgb(173, 84, 32);
   font-weight: bold;
+  border: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  background-color: chartreuse;
 }
 
 
 .logout {
   text-decoration: none;
-  color: #333333;
+  color: rgb(173, 84, 32);
+  border: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  background-color: chartreuse;
 }
 
 .login {
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
-  color: #333333;
+  color: rgb(173, 84, 32);
+  border: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  background-color: chartreuse;
 }
 
 .sign-up {
   text-decoration: none;
-  color: #333333;
+  color: rgb(173, 84, 32);
+  border: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  background-color: chartreuse;
 }
