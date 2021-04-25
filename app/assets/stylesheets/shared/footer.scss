@@ -1,16 +1,17 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
 .top-page-footer {
-  height: 300px;
+  height: 500px;
   width: 100vw;
-  background-image: image-url('door.png');
+  background-image: image-url('wood-wall.jpg');
   background-repeat: no-repeat;
   background-color: rgb(0, 255, 234);
-  background-position: right 50% top 50px;
+  // background-position: right 50% top 50px;
   padding: 2vh 5vw;
-  display: flex;
+  // display: flex;
   text-shadow    : 
   2px  2px 1px #ffffff,
  -2px  2px 1px #ffffff,
@@ -22,8 +23,39 @@
   0px -2px 1px #ffffff;
 }
 
-.nav {
-  justify-content: center;
+.footer-text {
+  text-align: center;
+}
+
+p {
+  margin-top: 10px;
+  color          : #ffffff;
+  letter-spacing : 4px;
+  text-shadow    : 
+  2px  2px 6px #990000,
+  -2px  2px 6px #990000,
+  2px -2px 6px #990000,
+  -2px -2px 6px #990000,
+  2px  0px 6px #990000,
+  0px  2px 6px #990000,
+  -2px  0px 6px #990000,
+  0px -2px 6px #990000;
+}
+
+// .nav {
+//   justify-content: center;
+// }
+
+.door {
+  position: relative;
+  left:  450px;
+  top: 10px;
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
 }
 
 .login {
@@ -33,7 +65,7 @@
   color: rgb(173, 84, 32);
   border: solid;
   border-color: cadetblue;
-  padding: 10px;
+  // padding: 10px;
   background-color: chartreuse;
 }
 
@@ -44,6 +76,6 @@
   color: rgb(173, 84, 32);
   border: solid;
   border-color: cadetblue;
-  padding: 10px;
+  // padding: 10px;
   background-color: chartreuse;
 }
