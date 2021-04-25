@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -122,8 +126,8 @@ p.arrow-mark {
 
 .h3-text {
   display        : inline-block;
-  color          : #ff66ff;            /* 文字の色 */
-  font-size      : 24pt;               /* 文字のサイズ */
+  color          : #ff66ff;
+  font-size      : 24pt;
   text-shadow    : 
        3px  3px 1px #ffff1a,
       -3px  3px 1px #ffff1a,
@@ -132,5 +136,5 @@ p.arrow-mark {
        3px  0px 1px #ffff1a,
        0px  3px 1px #ffff1a,
       -3px  0px 1px #ffff1a,
-       0px -3px 1px #ffff1a;        /* 文字の影 */
+       0px -3px 1px #ffff1a;
 }

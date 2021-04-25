@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+}
+
+.top-page-footer {
+  height: 300px;
+  width: 100vw;
+  background-image: image-url('door.png');
+  background-repeat: no-repeat;
+  background-color: rgb(0, 255, 234);
+  background-position: right 50% top 50px;
+  padding: 2vh 5vw;
+  display: flex;
+  text-shadow    : 
+  2px  2px 1px #ffffff,
+ -2px  2px 1px #ffffff,
+  2px -2px 1px #ffffff,
+ -2px -2px 1px #ffffff,
+  2px  0px 1px #ffffff,
+  0px  2px 1px #ffffff,
+ -2px  0px 1px #ffffff,
+  0px -2px 1px #ffffff;
+}
+
+.nav {
+  justify-content: center;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  // margin-right: 3vw;
+  color: rgb(173, 84, 32);
+  border: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  background-color: chartreuse;
+}
+
+.sign-up {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 530px;
+  color: rgb(173, 84, 32);
+  border: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  background-color: chartreuse;
+}

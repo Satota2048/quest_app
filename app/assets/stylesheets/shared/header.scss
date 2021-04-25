@@ -3,7 +3,6 @@
 }
 
 .top-page-header {
-  background-image: image-url('noon_sky.png');
   height: 300px;
   width: 100vw;
   padding: 2vh 5vw;
@@ -23,21 +22,40 @@
   background-image: image-url('morning_sky.jpeg');
 }
 
+.morning2 {
+  background-image: image-url('morning_sky2.jpeg');
+}
+
 .noon {
   background-image: image-url('noon_sky.png');
+}
+
+.noon2 {
+  background-image: image-url('noon_sky2.png');
 }
 
 .afternoon {
   background-image: image-url('afternoon_sky.png');
 }
 
+.afternoon2 {
+  background-image: image-url('afternoon_sky2.jpeg');
+}
+
 .night {
-  background-image: image-url('night_sky.png');
+  background-image: image-url('night_sky.jpeg');
+}
+
+.night2 {
+  background-image: image-url('night_sky2.jpeg');
+}
+
+.night3 {
+  background-image: image-url('night_sky3.jpeg');
 }
 
 .search-bar-contents {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   white-space: nowrap;
 }
