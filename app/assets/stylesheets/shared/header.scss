@@ -31,7 +31,7 @@
 }
 
 .noon2 {
-  background-image: image-url('noon_sky2.png');
+  background-image: image-url('noon_sky2.jpeg');
 }
 
 .afternoon {
@@ -107,7 +107,7 @@
   background-color: chartreuse;
 }
 
-.login {
+.front-header-login {
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
@@ -118,11 +118,32 @@
   background-color: chartreuse;
 }
 
-.sign-up {
-  text-decoration: none;
-  color: rgb(173, 84, 32);
-  border: solid;
-  border-color: cadetblue;
-  padding: 10px;
-  background-color: chartreuse;
+.front-header-login {
+  display       : inline-block;
+  border-radius : 50%;
+  font-size     : 16pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 12px 12px;
+  background    : #ffffff;
+  color         : #000000;
+  line-height   : 1em;
+  transition    : .3s;
+  box-shadow    : 1px 1px #666666;
+  border        : 2px solid #ffffff;
+}
+
+.front-header-sign-up {
+  display       : inline-block;
+  border-radius : 50%;
+  font-size     : 16pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 12px 12px;
+  background    : #ffffff;
+  color         : #000000;
+  line-height   : 1em;
+  transition    : .3s;
+  box-shadow    : 1px 1px #666666;
+  border        : 2px solid #ffffff;
 }
