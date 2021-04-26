@@ -1,16 +1,14 @@
 <footer class=top-page-footer>
-  <%# <div class='nav'> %>
-    <div class='footer-text'>
-      <p>QUESTでは、自分自身で「クエスト達成条件」を設定することができます。</p>
-      <p>自分にできることから目標を細かく具体的に書くことで、成功確率を上げて行きましょう。</p>
-      <p>遠い先を見ながら、今できることを確実に行う。そんな当たり前の手助けをするのがQUESTです。</p>
-    </div>
-    <%= image_tag 'door.png', class: 'door', size: '400x300' %>
-    <ul class='lists-right'>
-      <% unless user_signed_in? %>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <% end %>
-    </ul>
-  <%# </div> %>
+  <div class='footer-text'>
+    <p>QUESTでは、自分自身で「クエスト達成条件」を設定することができます。</p>
+    <p>自分にできることから目標を細かく具体的に書くことで、成功確率を上げて行きましょう。</p>
+    <p>遠い先を見ながら、今できることを確実に行う。そんな当たり前の手助けをするのがQUESTです。</p>
+  </div>
+  <%= image_tag 'door.png', class: 'door', size: '400x300' %>
+  <ul class='lists-right'>
+    <% unless user_signed_in? %>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "front-footer-login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "front-footer-sign-up" %></li>
+    <% end %>
+  </ul>
 </footer>
