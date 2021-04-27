@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_22_073356) do
+ActiveRecord::Schema.define(version: 2021_04_27_075404) do
+
+  create_table "quests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.string "title", null: false
+    t.string "explain", null: false
+    t.date "limit", null: false
+    t.string "achievement_purpose"
+    t.string "achievement_condition"
+    t.string "self_reward"
+    t.string "self_penalty"
+    t.string "order_condition"
+    t.text "detail_text"
+    t.integer "achievement_status_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_quests_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
@@ -30,4 +48,5 @@ ActiveRecord::Schema.define(version: 2021_04_22_073356) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "quests", "users"
 end
