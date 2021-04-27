@@ -6,10 +6,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  text-align: center;
-}
-
 .main {
   background: #f8f8f8;
   font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','American Typewriter',sans-serif;
@@ -30,7 +26,8 @@ p {
        0px -4px 5px #ffffff;
 }
 
-.home_text1 {
+.home-text1 {
+  text-align: center;
   width: 100vw;
   background-image: image-url('wood-texture-06.png');
   margin: 0;
