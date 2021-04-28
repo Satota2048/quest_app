@@ -5,23 +5,28 @@
   <ul class='quest-lists'>
 
     <% @quests.each do |quest| %>
-      <li class='list'>
-        <%# <%= link_to item_path(quest.id)  do %>
-        <div class='quest-img-content'>
-          <%# <%= image_tag quest.image, class: "quest-img" %>
-          <%# <% if item.user_judge.present? %> 
-            <%# <div class='sold-out'>
-              <span>Sold Out!!</span>
-            </div> %>
-          <%# <% end %>
-        </div>
-        <div class='item-info'>
-          <h3 class='item-name'>
-            <%= quest.title %>
-          </h3>
-        </div>
+      <li class='ichiran-list'>
+        <%= link_to quest_path(quest)  do%>
+          <div class='quest-img-content'>
+            <% if quest.image.present? %>
+              <%= image_tag quest.image, class: "quest-image" %>
+            <% end %>
+            <div class='quest-info'>
+              <h3 class='quest-title'>
+                <%= quest.title %>
+              </h3>
+              <h4 class='quest-explain'>
+                <%= quest.explain %>
+              </h4>
+              <h5 class='quest-limit'>
+                期限：<%= quest.limit %>
+              </h5>
+            </div>
+          </div>
+        <% end %>
       </li>
     <% end%>
   </ul>
 </div>
 <%# /商品一覧 %>
+

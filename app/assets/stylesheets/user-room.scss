@@ -8,16 +8,29 @@
 .quest-board {
   width: 100%;
   height: 900px;
+  list-style: none;
 }
 
 .list {
   width: calc((100% - 50px) / 3);
+  height: 450px;
   margin-bottom: 40px;
+  margin-left: 10px;
+}
+
+.ichiran-list {
+  margin-bottom: 10px;
 }
 
 .list__wrapper {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 40px;
   justify-content: space-between;
   align-items: center;
+}
+
+.quest-image {
+  width: 100px;
+  height: 80px;
 }
