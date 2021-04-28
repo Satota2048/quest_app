@@ -16,6 +16,8 @@
   0px  2px 1px #ffffff,
  -2px  0px 1px #ffffff,
   0px -2px 1px #ffffff;
+  background-repeat:no-repeat;
+  background-size:  cover;
 }
 
 .morning {
@@ -81,7 +83,6 @@
 .lists-left {
   display: flex;
   min-width: 200px;
-
 }
 
 .user-nickname {
