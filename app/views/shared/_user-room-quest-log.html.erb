@@ -1,0 +1,27 @@
+<%# 商品一覧 %>
+<div class='quest-contents'>
+  <h2 class='title'>クエストログ</h2>
+  <%= link_to '新規投稿クエスト', "#", class: "subtitle" %>
+  <ul class='quest-lists'>
+
+    <% @quests.each do |quest| %>
+      <li class='list'>
+        <%# <%= link_to item_path(quest.id)  do %>
+        <div class='quest-img-content'>
+          <%# <%= image_tag quest.image, class: "quest-img" %>
+          <%# <% if item.user_judge.present? %> 
+            <%# <div class='sold-out'>
+              <span>Sold Out!!</span>
+            </div> %>
+          <%# <% end %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= quest.title %>
+          </h3>
+        </div>
+      </li>
+    <% end%>
+  </ul>
+</div>
+<%# /商品一覧 %>

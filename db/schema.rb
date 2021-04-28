@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_04_27_124729) do
   create_table "quests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "category_id", null: false
     t.string "title", null: false
-    t.string "explain", null: false
+    t.text "explain", null: false
     t.date "limit", null: false
     t.string "achievement_purpose"
     t.string "achievement_condition"
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 2021_04_27_124729) do
     t.string "self_penalty"
     t.string "order_condition"
     t.text "detail_text"
-    t.integer "achievement_status_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
