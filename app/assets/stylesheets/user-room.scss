@@ -1,0 +1,23 @@
+// ユーザールームのscss
+.create-quest  {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.quest-board {
+  width: 100%;
+  height: 900px;
+}
+
+.list {
+  width: calc((100% - 50px) / 3);
+  margin-bottom: 40px;
+}
+
+.list__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}

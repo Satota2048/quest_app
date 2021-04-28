@@ -1,11 +1,28 @@
 <div class="user-home-text1">
   <h2 class="user-room-name"><%= current_user.nickname%>さんの部屋です。</h2>
-  <ul class="quest-bord">
-    <li><%= link_to 'クエスト作成', new_quest_path, class: "create-quest" %></li>
-    <li><%= link_to 'クエストログ', '#'%></li>
-    <%= render 'shared/user-room-quest-log'%>
-    <li><%= link_to 'クエスト進行度一覧', '#'%></li>
-    <li><%= link_to '公開中クエスト', '#'%></li>
-    <li><%= link_to 'クエスト掲示板', '#'%></li>
+  <%= link_to 'クエスト作成', new_quest_path, class: "create-quest" %>
+  <ul class="quest-board">
+    <div class="list__wrapper">
+      <div class='list'>
+        <li><%= link_to '未受注クエスト', quest_path(@quests)%>
+              <%= render 'shared/user-room-quest-log' %>
+        </li>
+      </div>
+      <div class='list'>
+        <li><%= link_to '進行中クエスト', '#'%></li>
+      </div>
+      <div class='list'>
+        <li><%= link_to '達成済みクエスト', '#'%></li>
+      </div>
+      <div class='list'>
+        <li><%= link_to 'クエスト達成ログ', '#'%></li>
+      </div>
+      <div class='list'>
+        <li><%= link_to '公開中クエスト', '#'%></li>
+      </div>
+      <div class='list'>
+        <li><%= link_to '一般依頼クエスト', '#'%></li>
+      </div>
+    </div>
   </ul>
 </div>
