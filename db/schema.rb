@@ -38,11 +38,12 @@ ActiveRecord::Schema.define(version: 2021_04_27_124729) do
     t.string "title", null: false
     t.text "explain", null: false
     t.date "limit", null: false
+    t.time "limit_time"
     t.string "achievement_purpose"
     t.string "achievement_condition"
     t.string "self_reward"
     t.string "self_penalty"
-    t.string "order_condition"
+    t.integer "checker_id", null: false
     t.text "detail_text"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

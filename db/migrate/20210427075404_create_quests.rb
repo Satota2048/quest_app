@@ -5,11 +5,12 @@ class CreateQuests < ActiveRecord::Migration[6.0]
       t.string          :title,                null: false
       t.text            :explain,              null: false
       t.date            :limit,                null: false
+      t.time            :limit_time
       t.string          :achievement_purpose
       t.string          :achievement_condition
       t.string          :self_reward
       t.string          :self_penalty
-      # t.string          :order_condition
+      t.integer         :checker_id,           null: false
       t.text            :detail_text
       t.references      :user,                 null: false, foreign_key: true
       t.timestamps

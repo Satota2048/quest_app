@@ -1,27 +1,54 @@
 <div class="user-home-text1">
   <h2 class="user-room-name"><%= current_user.nickname%>さんの部屋です。</h2>
-  <%= link_to 'クエスト作成', new_quest_path, class: "create-quest" %>
+  <%= link_to '＊ クエスト作成 ＊', new_quest_path, class: "create-quest" %>
+
   <ul class="quest-board">
     <div class="list__wrapper">
       <div class='list'>
-        <li>未受注クエスト
+        <li>
+            <% if flash[:notice] %>
+              <p><%= flash[:notice] %></p>
+            <% end %>
+            <div class="list-name">
+              <%= link_to '未受注クエスト', '#'%>
+            </div>
               <%= render 'shared/user-room-quest-log' %>
         </li>
       </div>
       <div class='list'>
-        <li><%= link_to '進行中クエスト', '#'%></li>
+        <li>
+          <div class="list-name">
+            <%= link_to '進行中クエスト', '#'%>
+          </div>
+        </li>
       </div>
       <div class='list'>
-        <li><%= link_to '達成済みクエスト', '#'%></li>
+        <li>
+          <div class="list-name">
+            <%= link_to '達成済みクエスト', '#'%>
+          </div>
+        </li>
       </div>
       <div class='list'>
-        <li><%= link_to 'クエスト達成ログ', '#'%></li>
+        <li>
+          <div class="list-name">
+            <%= link_to 'クエスト達成ログ', '#'%>
+          </div>
+        </li>
       </div>
       <div class='list'>
-        <li><%= link_to '公開中クエスト', '#'%></li>
+        <li>
+          <div class="list-name">
+            <%= link_to '公開中クエスト', '#'%>
+          </div>
+        </li>
       </div>
       <div class='list'>
-        <li><%= link_to '一般依頼クエスト', '#'%></li>
+        <li>
+          <div class="list-name">
+            <%= link_to '一般依頼クエスト', '#'%>
+          </div>
+        </li>
       </div>
     </div>
   </ul>

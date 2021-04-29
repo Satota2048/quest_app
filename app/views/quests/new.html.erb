@@ -42,6 +42,10 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.date_field :limit, class:'date-select'%>
+      <div class="weight-bold-text">
+        時刻
+      </div>
+      <%= f.time_field :limit_time, class:'time-select'%>
     </div>
     <%# /商品名と商品説明 %>
 
@@ -64,6 +68,8 @@
         <%= f.text_area :self_penalty, class:"quests-text", id:"quest-info", placeholder:"失敗したらどうなるのかを簡潔に(100字以内)書きましょう。自分で設定するものなので、同じく現実的なものにしましょう。",rows:"3",maxlength:"100"%>
         <div class="weight-bold-text">詳細説明</div>
         <%= f.text_area :detail_text, class:"quests-text", id:"quest-info", placeholder:"詳細な説明を書きましょう(400字以内)。ストーリー性があるものでもいいですが、公開する場合には個人が特定されないように注意してください。",rows:"7",maxlength:"400"%>
+        <div class="weight-bold-text">達成状況(今すぐ受けるか、後で受けるのかを選んでください。)</div>
+        <%= f.collection_select(:checker_id, Checker.all, :id, :name, {}, {class:"select-box", id:"quest-checker"})%>
       </div>
     </div>
     <%# /商品の詳細 %>
