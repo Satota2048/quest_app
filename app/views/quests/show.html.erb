@@ -1,1 +1,40 @@
-クエストの詳細を表示。受注の有無の決定を含む
+<div class="show-all">
+  <div class='show-quest-content'>
+    <div class='show-quest-category'>
+      <% if @quest.category_id == 1 %>
+        ＜<span class="show-category-name1">
+      <% elsif @quest.category_id == 2 %>
+        ＜<span class="show-category-name2">
+      <% elsif @quest.category_id == 3 %>
+        ＜<span class="show-category-name3">
+      <% elsif @quest.category_id == 4 %>
+        ＜<span class="show-category-name4">
+      <% elsif @quest.category_id == 5 %>
+        ＜<span class="show-category-name5">
+      <% elsif @quest.category_id == 6 %>
+        ＜<span class="show-category-name6">
+      <% end %>
+      <%= @quest.category.name%></span>＞
+    </div>
+    <div class='show-quest-title'>
+      『<%= @quest.title %>』
+    </div>
+    <% if @quest.image.present? %>
+      <%= image_tag @quest.image, class: "show-quest-image" %>
+    <% end %>
+    <div class='show-quest-explain'>
+      <%= @quest.explain %>
+    </div>
+    <div class='show-quest-limit'>
+      期限：<%= @quest.limit %> 時刻: <%= @quest.limit_time%>
+    </div>
+  </div>
+  <div class="show-quests-detail">
+    <%= @quest.achievement_purpose %><br>
+    <%= @quest.achievement_condition %><br>
+    <%= @quest.self_reward %><br>
+    <%= @quest.self_penalty %><br>
+    <%= @quest.detail_text %><br>
+    <%= @quest.checker.name%><br>
+  </div>
+</div>

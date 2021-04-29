@@ -14,7 +14,7 @@ class Quest < ApplicationRecord
   with_options numericality: { other_than: 1 } do
     validates :category_id
   end
-  with_options numericality: {other_than: 3 } do
+  with_options numericality: {less_than: 3 } do
     validates :checker_id
   end
 

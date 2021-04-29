@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2021_04_27_124729) do
     t.string "title", null: false
     t.text "explain", null: false
     t.date "limit", null: false
-    t.time "limit_time"
+    t.string "limit_time"
     t.string "achievement_purpose"
     t.string "achievement_condition"
     t.string "self_reward"

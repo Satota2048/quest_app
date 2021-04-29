@@ -9,7 +9,8 @@ class Category < ActiveHash::Base
     { id: 4, name: 'ドリームクエスト' },
     # 自己成長
     { id: 5, name: 'トレーニングクエスト' },
-    { id: 6, name: 'その他' },
+    # 例外
+    { id: 6, name: 'エクセプションクエスト' },
   ]  
 
   include ActiveHash::Associations

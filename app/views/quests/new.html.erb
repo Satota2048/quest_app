@@ -22,7 +22,7 @@
     </div>
     <%# /出品画像 %>
 
-    <%# 商品名と商品説明 %>
+    <%# クエスト名と説明 %>
     <div class="new-quests">
       <div class="weight-bold-text">
         クエスト名
@@ -32,7 +32,7 @@
       <div class="quests-explain">
         <div class="weight-bold-text">
           サブタイトル（クエスト説明を完結に）
-          <span class="indispensable">必須</span>
+          <span class="indispensable">必須<span>
         </div>
         <%= f.text_area :explain, class:"quests-text", id:"quest-info", placeholder:"クエストの説明を簡潔に（100字以内）。一目でどのようなものなのかが分かる説明がいいです。" ,rows:"3" ,maxlength:"100" %>
       </div>
@@ -47,9 +47,9 @@
       </div>
       <%= f.time_field :limit_time, class:'time-select'%>
     </div>
-    <%# /商品名と商品説明 %>
+    <%# /クエスト名と説明 %>
 
-    <%# 商品の詳細 %>
+    <%# クエストの詳細 %>
     <div class="quests-detail">
       <div class="weight-bold-text">商品の詳細</div>
       <div class="form">
@@ -72,7 +72,7 @@
         <%= f.collection_select(:checker_id, Checker.all, :id, :name, {}, {class:"select-box", id:"quest-checker"})%>
       </div>
     </div>
-    <%# /商品の詳細 %>
+    <%# /クエストの詳細 %>
 
     <%# 下部ボタン %>
     <div class="create-btn-contents">
