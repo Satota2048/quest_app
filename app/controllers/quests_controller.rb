@@ -1,7 +1,7 @@
 class QuestsController < ApplicationController
   # インデックスはログインしていない場合の表示があるので除外
   before_action :authenticate_user!, except: :index
-  before_action :set_params, only: [:show, :edit]
+  before_action :set_params, only: [:show, :edit,:update]
   before_action :check, only: :edit
 
   def index
@@ -29,7 +29,9 @@ class QuestsController < ApplicationController
 
   def update
     if @quest.update(quest_params)
-      redirect_to item_path(@quest.id)
+      flash[:notice] = "変更されました"
+        redirect_to root_path
+      # redirect_to quest_path(@quest.id)
     else
       render :edit
     end

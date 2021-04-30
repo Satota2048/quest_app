@@ -79,7 +79,7 @@
     <%# 下部ボタン %>
     <div class="create-btn-contents">
       <%= f.submit "作成する" , class:"create-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <%=link_to 'もどる', quest_path(@quest.id), class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
     <% end %>
