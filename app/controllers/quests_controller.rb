@@ -26,7 +26,15 @@ class QuestsController < ApplicationController
 
   def edit
   end
-  
+
+  def update
+    if @quest.update(quest_params)
+      redirect_to item_path(@quest.id)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def quest_params

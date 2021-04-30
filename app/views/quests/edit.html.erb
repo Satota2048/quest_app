@@ -1,0 +1,87 @@
+編集画面
+
+<div class="new-quest-contents">
+  <header class="my-quest-header">
+    <%= link_to image_tag("logo.png", class:"quest-icon"), root_path %>
+  </header>
+  <div class="new-quest-main">
+    <h2 class="new-quest-title">クエストの情報を入力</h2>
+    <%= form_with  model: @quest, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        参考画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"quest-image" %>
+      </div>
+    </div>
+    <%# /出品画像 %>
+
+    <%# クエスト名と説明 %>
+    <div class="new-quests">
+      <div class="weight-bold-text">
+        クエスト名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"quests-text", id:"quest-name", placeholder:"クエスト名を入れてください(40字以内)。同じ名前は避けた方が望ましいです。", maxlength:"40" %>
+      <div class="quests-explain">
+        <div class="weight-bold-text">
+          サブタイトル（クエスト説明を完結に）
+          <span class="indispensable">必須<span>
+        </div>
+        <%= f.text_area :explain, class:"quests-text", id:"quest-info", placeholder:"クエストの説明を簡潔に（100字以内）。一目でどのようなものなのかが分かる説明がいいです。" ,rows:"3" ,maxlength:"100" %>
+      </div>
+      <div class="weight-bold-text">受注条件</div>
+      <div class="weight-bold-text">
+        期限
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.date_field :limit, class:'date-select'%>
+      <div class="weight-bold-text">
+        時刻
+      </div>
+      <%= f.time_field :limit_time, class:'time-select'%>
+    </div>
+    <%# /クエスト名と説明 %>
+
+    <%# クエストの詳細 %>
+    <div class="quests-detail">
+      <div class="weight-bold-text">商品の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"quest-category"}) %>
+        <div class="weight-bold-text">達成目的</div>
+        <%= f.text_area :achievement_purpose, class:"quests-text", id:"quest-info", placeholder:"何のためにクエストに臨むのかを簡潔に（100字以内）。一目でどのようなものなのかが分かる説明がいいです。" ,rows:"3" ,maxlength:"100" %>
+        <div class="weight-bold-text">達成条件</div>
+        <%= f.text_area :achievement_condition, class:"quests-text", id:"quest-info", placeholder:"どうすれば達成したことになるのかを簡潔に(100字以内)書きましょう。",rows:"3",maxlength:"100"%>
+        <div class="weight-bold-text">自分への達成報酬</div>
+        <%= f.text_area :self_reward, class:"quests-text", id:"quest-info", placeholder:"達成した際に何が得られるのかを簡潔に(100字以内)書きましょう。自分へのご褒美なので、現実的なもののほうがいいでしょう。",rows:"3",maxlength:"100"%>
+        <div class="weight-bold-text">失敗ペナルティ</div>
+        <%= f.text_area :self_penalty, class:"quests-text", id:"quest-info", placeholder:"失敗したらどうなるのかを簡潔に(100字以内)書きましょう。自分で設定するものなので、同じく現実的なものにしましょう。",rows:"3",maxlength:"100"%>
+        <div class="weight-bold-text">詳細説明</div>
+        <%= f.text_area :detail_text, class:"quests-text", id:"quest-info", placeholder:"詳細な説明を書きましょう(400字以内)。ストーリー性があるものでもいいですが、公開する場合には個人が特定されないように注意してください。",rows:"7",maxlength:"400"%>
+        <div class="weight-bold-text">達成状況(今すぐ受けるか、後で受けるのかを選んでください。)</div>
+        <%= f.collection_select(:checker_id, Checker.all, :id, :name, {}, {class:"select-box", id:"quest-checker"})%>
+      </div>
+    </div>
+    <%# /クエストの詳細 %>
+
+    <%# 下部ボタン %>
+    <div class="create-btn-contents">
+      <%= f.submit "作成する" , class:"create-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+    <% end %>
+  </div>
+</div>

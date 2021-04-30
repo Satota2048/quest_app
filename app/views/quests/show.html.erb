@@ -1,40 +1,66 @@
 <div class="show-all">
   <div class='show-quest-content'>
     <div class='show-quest-category'>
-      <% if @quest.category_id == 1 %>
+      <% if @quest.category_id == 2 %>
         ＜<span class="show-category-name1">
-      <% elsif @quest.category_id == 2 %>
-        ＜<span class="show-category-name2">
       <% elsif @quest.category_id == 3 %>
-        ＜<span class="show-category-name3">
+        ＜<span class="show-category-name2">
       <% elsif @quest.category_id == 4 %>
-        ＜<span class="show-category-name4">
+        ＜<span class="show-category-name3">
       <% elsif @quest.category_id == 5 %>
-        ＜<span class="show-category-name5">
+        ＜<span class="show-category-name4">
       <% elsif @quest.category_id == 6 %>
-        ＜<span class="show-category-name6">
+        ＜<span class="show-category-name5">
       <% end %>
       <%= @quest.category.name%></span>＞
     </div>
     <div class='show-quest-title'>
-      『<%= @quest.title %>』
+      <% if @quest.category_id == 2 %>
+        <span class='show-title-effect1'>
+      <% elsif @quest.category_id == 3 %>
+        <span class='show-title-effect2'>
+      <% elsif @quest.category_id == 4 %>
+        <span class='show-title-effect3'>
+      <% elsif @quest.category_id == 5 %>
+        <span class='show-title-effect4'>
+      <% elsif @quest.category_id == 6 %>
+        <span class='show-title-effect5'>
+      <% end %>
+      『<%= @quest.title %>』</span>
     </div>
     <% if @quest.image.present? %>
       <%= image_tag @quest.image, class: "show-quest-image" %>
+    <% else %>
+      <%= image_tag "no-image.png", class: "show-quest-image" %>
     <% end %>
     <div class='show-quest-explain'>
-      <%= @quest.explain %>
+      達成要件 ：<%= @quest.explain %>
     </div>
     <div class='show-quest-limit'>
-      期限：<%= @quest.limit %> 時刻: <%= @quest.limit_time%>
+      期限：<%= @quest.limit %>
+      <% if @quest.limit_time.present? %>
+        時刻: <%= @quest.limit_time%>
+      <% end %>
     </div>
   </div>
   <div class="show-quests-detail">
-    <%= @quest.achievement_purpose %><br>
-    <%= @quest.achievement_condition %><br>
-    <%= @quest.self_reward %><br>
-    <%= @quest.self_penalty %><br>
-    <%= @quest.detail_text %><br>
-    <%= @quest.checker.name%><br>
+    ・達成目的      ：<%= @quest.achievement_purpose %><br>
+    ・達成条件      ：<%= @quest.achievement_condition %><br>
+    ・達成報酬      ：<%= @quest.self_reward %><br>
+    ・失敗ペナルティ ：<%= @quest.self_penalty %><br>
+    ・依頼状態      ：<%= @quest.checker.name%><br>
+    <div class="note-wrap">
+      <div class="note">
+        ・クエスト内容   ：<br>
+        <p>
+          <%= @quest.detail_text %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="show-btns">
+    <%= link_to 'もどる', '/', class: "show-btn"%>
+    <%= link_to '編集する', edit_quest_path, class: "show-btn"%>
+    <%= link_to '依頼状態の変更', '#', class: "show-btn"%>
   </div>
 </div>
