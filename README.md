@@ -19,22 +19,19 @@
 
 ## quests
 
-| Column          | Type          | Options                        |
-| --------------- | ------------- | ------------------------------ |
-| title           | string        | null: false                    |
-| explain         | text          | null: false                    |
-| category_id     | integer       | null: false                    |
-| status_id       | integer       | null: false                    |
-| conditions      | string        | null: false                    |
-| status_permit   | string        | null: false                    |
-| explain         | text          | null: false                    |
-| limit           | date          | null: false                    |
-| achievement     | string        | null: false                    |
-| treat_myself    | string        |                                |
-| reset_time_id   | integer       | null: false                    |
-| reward          | integer       |                                |
-| memo            | text          |                                |
-| user            | references    | null: false, foreign_key: true |
+| Column                | Type          | Options                        |
+| --------------------- | ------------- | ------------------------------ |
+| category_id           | integer       | null: false                    |
+| title                 | string        | null: false                    |
+| explain               | text          | null: false                    |
+| limit                 | date          | null: false                    |
+| achievement_purpose   | string        | null: false                    |
+| achievement_condition | integer       | null: false                    |
+| self_reward           | string        |                                |
+| self_penalty          | string        |                                |
+| order_condition       | string        |                                |
+| detail_text           | integer       |                                |
+| user                  | references    | null: false, foreign_key: true |
 
 ## Association
 - belongs_to :user
