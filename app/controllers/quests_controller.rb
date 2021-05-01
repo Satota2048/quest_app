@@ -1,8 +1,8 @@
 class QuestsController < ApplicationController
   # インデックスはログインしていない場合の表示があるので除外
   before_action :authenticate_user!, except: :index
-  before_action :set_params, only: [:show, :edit,:update]
-  before_action :check, only: :edit
+  before_action :set_params, only: [:show,:edit,:update,:destroy]
+  before_action :check, only: [:edit,:destroy]
 
   def index
     @quests = Quest.all.order("created_at DESC")
@@ -35,6 +35,12 @@ class QuestsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    flash[:notice] = "クエスト『#{@quest.title}』が削除されました"
+    @quest.destroy
+    redirect_to root_path
   end
 
   private
