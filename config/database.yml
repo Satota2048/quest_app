@@ -52,3 +52,6 @@ production:
   database: quest_app_production
   username: quest_app
   password: <%= ENV['QUEST_APP_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
