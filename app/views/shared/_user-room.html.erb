@@ -20,7 +20,7 @@
               <% @quests.each do |quest| %>
                 <%# 本人のクエストのみ表示 %>
                 <% if current_user.id == quest.user_id %>
-                  <li class='ichiran-list'>
+                  <%# <li class='ichiran-list'> %>
                     <%= link_to quest_path(quest.id)  do%>
                       <% if quest.checker_id == 1 %>
                         <div class='quest-content'>
@@ -45,7 +45,7 @@
                         </div>
                       <% end %>
                     <% end %>
-                  </li>
+                  <%# </li> %>
                 <% end %>
                 <%# 本人のクエストのみ表示 %>
               <% end%>
