@@ -13,7 +13,7 @@
       <div class='list'>
         <li>
           <div class="list-name">
-            <%= link_to '未受注クエスト', choosed_list_quests_path %>
+            <%= link_to '未受注クエスト', choosed_list_quest_path(@quests) %>
           </div>
           <ul class='quest-lists'>
             <% @quests.each do |quest| %>

@@ -29,6 +29,7 @@ class QuestsController < ApplicationController
 
   def choosed_list
     @quests = Quest.all.order("created_at DESC")
+    @choosed_title = @quest.find(params[:checker_id])
   end
 
   def update
