@@ -1,1 +1,11 @@
 // リスト表示表scss
+
+.choosed-quest-content {
+  border-bottom: solid #d7cf3a 3px;
+  margin: 15px;
+}
+
+.choosed-quest-lists {
+  display: flex;
+  flex-wrap: wrap;
+}
