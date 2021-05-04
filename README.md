@@ -1,5 +1,18 @@
 # README
 
+
+# 利用するためのキーなど
+
+## basic-auth 
+
+ユーザー   :admin
+パスワード  :2222
+
+## ログイン用ユーザー
+
+メールアドレス  : ika@ika
+パスワード     :  ika1kan
+
 ## users
 
 | Column             | Type   | Options                   |

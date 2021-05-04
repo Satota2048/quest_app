@@ -1,0 +1,37 @@
+// リスト表示表scss
+
+.yet-top {
+  color: #f8b862;
+  font-size: 30px;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  background-color: #e95295;
+}
+
+.yet-quest-contents {
+  background-image: image-url("wood-texture26.png");
+}
+
+.yet-quest-content {
+  border-bottom: solid #d7cf3a 3px;
+  margin: 15px;
+  padding: 0 30px;
+}
+
+.yet-quest-lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.yet-bottom {
+  height: 50px;
+  background-color: #8c6450;
+}
+
+.yet-back {
+  color: #fbfaf5;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}

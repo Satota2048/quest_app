@@ -27,11 +27,18 @@ class QuestsController < ApplicationController
   def edit
   end
 
+  def yet_list
+    @quests = Quest.all.order("created_at DESC")
+  end
+
+  def doing_list
+    @quests = Quest.all.order("created_at DESC")
+  end
+
   def update
     if @quest.update(quest_params)
       flash[:notice] = "変更されました"
         redirect_to root_path
-      # redirect_to quest_path(@quest.id)
     else
       render :edit
     end
