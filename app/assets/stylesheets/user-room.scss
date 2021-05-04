@@ -23,7 +23,7 @@
 
 .quest-board {
   width: 100%;
-  height: 1000px;
+  height: 1050px;
   list-style: none;
   background-image: image-url("wood-texture03.png");
   background-repeat: repeat;
@@ -45,8 +45,7 @@
 .list {
   width: calc((100% - 50px) / 3);
   height: 450px;
-  margin-top: 10px;
-  margin-bottom: 40px;
+  margin-top: 50px;
   padding: 10px;
   overflow: scroll;
   -moz-border-radius: 10px;

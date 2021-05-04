@@ -13,7 +13,7 @@
       <div class='list'>
         <li>
           <div class="list-name">
-            <%= link_to '未受注クエスト', '#'%>
+            <%= link_to '未受注クエスト', "#" %>
           </div>
           <div class='quest-contents'>
             <ul class='quest-lists'>
@@ -37,7 +37,8 @@
                             <%= quest.explain %>
                           </h4>
                           <h5 class='quest-limit'>
-                            期限：<%= quest.limit %> 時刻: <%= quest.limit_time%>
+                            期限：<%= quest.limit %> 
+                            <% if quest.limit_time.present? %>時刻: <%= quest.limit_time%><% end %>
                           </h5>
                         </div>
                       <% end %>
@@ -133,7 +134,6 @@
           </div>
         </li>
         <%# /checker.idの値によって表示変化 %>
-        </li>
       </div>
       <div class='list'>
         <li>
