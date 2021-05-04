@@ -27,6 +27,10 @@ class QuestsController < ApplicationController
   def edit
   end
 
+  def choosed_list
+    @quests = Quest.all.order("created_at DESC")
+  end
+
   def update
     if @quest.update(quest_params)
       flash[:notice] = "変更されました"

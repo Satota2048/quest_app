@@ -1,0 +1,39 @@
+<%= render "shared/header" %>
+クエストリスト一覧表示
+<div class='quest-contents'>
+  <ul class='quest-lists'>
+    <% @quests.each do |quest| %>
+      <%# 本人のクエストのみ表示 %>
+      <% if current_user.id == quest.user_id %>
+        <li class='ichiran-list'>
+          <%= link_to quest_path(quest.id)  do%>
+            <% if quest.checker_id == 1 %>
+              <div class='quest-content'>
+                <h5 class='quest-category'>
+                  <%= quest.category.name%>
+                </h5>
+                <h3 class='quest-title'>
+                  <%= quest.title %>
+                </h3>
+                <% if quest.image.present? %>
+                  <%= image_tag quest.image, class: "quest-image" %>
+                <% else %>
+                  <%= image_tag "no-image.png",class:"quest-image"%>
+                <% end %>
+                <h4 class='quest-explain'>
+                  <%= quest.explain %>
+                </h4>
+                <h5 class='quest-limit'>
+                  期限：<%= quest.limit %> 
+                  <% if quest.limit_time.present? %>時刻: <%= quest.limit_time%><% end %>
+                </h5>
+              </div>
+            <% end %>
+          <% end %>
+        </li>
+      <% end %>
+      <%# 本人のクエストのみ表示 %>
+    <% end%>
+  </ul>
+</div>
+<%= render "shared/footer"%>

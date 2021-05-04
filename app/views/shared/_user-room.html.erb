@@ -13,7 +13,7 @@
       <div class='list'>
         <li>
           <div class="list-name">
-            <%= link_to '未受注クエスト', "#" %>
+            <%= link_to '未受注クエスト', choosed_list_quests_path %>
           </div>
           <div class='quest-contents'>
             <ul class='quest-lists'>
@@ -32,6 +32,8 @@
                           </h3>
                           <% if quest.image.present? %>
                             <%= image_tag quest.image, class: "quest-image" %>
+                          <% else %>
+                            <%= image_tag "no-image.png",class:"quest-image"%>
                           <% end %>
                           <h4 class='quest-explain'>
                             <%= quest.explain %>
@@ -74,6 +76,8 @@
                           </h3>
                           <% if quest.image.present? %>
                             <%= image_tag quest.image, class: "quest-image" %>
+                          <% else %>
+                            <%= image_tag "no-image.png",class:"quest-image"%>
                           <% end %>
                           <h4 class='quest-explain'>
                             <%= quest.explain %>
