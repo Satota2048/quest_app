@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "quests#index"
   resources :quests do
-    member do
-      get 'choosed_list'
+    collection do
+      get 'yet_list'
+      get 'doing_list'
     end
   end
 end

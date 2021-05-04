@@ -1,6 +1,6 @@
 // リスト表示表scss
 
-.choosed-top {
+.yet-top {
   color: #f8b862;
   font-size: 30px;
   text-align: center;
@@ -9,27 +9,27 @@
   background-color: #e95295;
 }
 
-.choosed-quest-contents {
+.yet-quest-contents {
   background-image: image-url("wood-texture26.png");
 }
 
-.choosed-quest-content {
+.yet-quest-content {
   border-bottom: solid #d7cf3a 3px;
   margin: 15px;
   padding: 0 30px;
 }
 
-.choosed-quest-lists {
+.yet-quest-lists {
   display: flex;
   flex-wrap: wrap;
 }
 
-.choosed-bottom {
+.yet-bottom {
   height: 50px;
   background-color: #8c6450;
 }
 
-.choosed-back {
+.yet-back {
   color: #fbfaf5;
   font-size: 30px;
   display: flex;

@@ -13,7 +13,7 @@
       <div class='list'>
         <li>
           <div class="list-name">
-            <%= link_to '未受注クエスト', choosed_list_quest_path(@quests) %>
+            <%= link_to '未受注クエスト',  yet_list_quests_path %>
           </div>
           <ul class='quest-lists'>
             <% @quests.each do |quest| %>
@@ -54,7 +54,7 @@
       <div class='list'>
         <li>
           <div class="list-name">
-            <%= link_to '進行中クエスト', '#'%>
+            <%= link_to '進行中クエスト', doing_list_quests_path %>
           </div>
           <%# checker.idの値によって表示変更 %>
           <div class='quest-contents'>
