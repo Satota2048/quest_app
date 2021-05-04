@@ -46,9 +46,6 @@
   width: calc((100% - 50px) / 3);
   height: 450px;
   margin-top: 50px;
-  // padding: 0 10px;
-  // padding-left: 15px;
-  // padding-right: 15px;
   overflow: scroll;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -72,6 +69,7 @@
 
 .quest-content {
   border-bottom: 4px solid #69821b;
+  margin: 0 10px;
 }
 
 .quest-image {
