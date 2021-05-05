@@ -63,7 +63,9 @@
     <%= link_to '編集する', edit_quest_path, class: "show-btn"%>
     <%= link_to "削除", quest_path, method: :delete, class:"destroy-btn" %>
   </div>
-  <%# <% if quest.checker_id == 2 %> %>
-    <%= link_to 'クエスト結果登録', '#',class: "show-btn"%>
-  <%# <% end %> %>
+  <% if @quest.checker_id == 2 %>
+    <div class="shift-btns">
+      <%= link_to 'クエスト結果登録', '#',class: "shift-btn"%>
+    </div>
+  <% end %>
 </div>

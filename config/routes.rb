@@ -6,5 +6,6 @@ Rails.application.routes.draw do
       get 'yet_list'
       get 'doing_list'
     end
+    resources :user_judges, only: [:index,:create]
   end
 end
