@@ -65,7 +65,8 @@
   </div>
   <% if @quest.checker_id == 3 %>
     <div class="shift-btns">
-      <%= link_to 'クエスト結果登録', decide_quest_path(@quest),class: "shift-btn"%>
+      <%= link_to '達成登録', quest_success_results_path(@quest.id),class: "shift-btn"%>
+      <%= link_to '失敗登録', quest_failed_results_path(@quest.id),class: "shift-btn"%>
     </div>
   <% end %>
 </div>
