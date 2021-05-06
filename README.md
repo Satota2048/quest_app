@@ -4,7 +4,9 @@
 # 利用するためのキーなど
 
 ## URL
-http://35.72.231.221/
+https://quest-app-34998.herokuapp.com/
+
+http://35.72.231.221/　←現在エラー解決中
 
 ## basic-auth 
 
@@ -13,6 +15,10 @@ http://35.72.231.221/
 
 ## ログイン用ユーザー
 
+メールアドレス　: sample@sample
+パスワード　　 : sample3ple
+
+現在試用不可アプリ↓
 メールアドレス  : ika@ika
 パスワード     :  ika1kan
 
