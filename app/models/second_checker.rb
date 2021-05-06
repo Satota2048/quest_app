@@ -1,8 +1,8 @@
-class Checker < ActiveHash::Base
+class Second_Checker < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
-    { id: 2, name: '作成のみ' },
-    { id: 3, name: '受注'},
+    { id: 2, name: '達成！！' },
+    { id: 3, name: 'リタイア……'},
   ]  
 
   include ActiveHash::Associations
