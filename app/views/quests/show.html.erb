@@ -61,7 +61,7 @@
   <div class="show-btns">
     <%= link_to 'もどる', '/', class: "show-btn"%>
     <%= link_to '編集する', edit_quest_path, class: "show-btn"%>
-    <%= link_to "削除", quest_path, method: :delete, class:"destroy-btn" %>
+    <%= link_to "削除", quest_path, method: :delete, class:"destroy-btn", data: {confirm: "削除しますか？"}  %>
   </div>
   <% if @quest.checker_id == 3 %>
     <div class="shift-btns">
