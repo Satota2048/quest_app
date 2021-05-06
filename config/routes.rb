@@ -8,5 +8,8 @@ Rails.application.routes.draw do
     end
     resources :quest_success_results, only: [:index,:create]
     resources :quest_failed_results, only: [:index,:create]
+    member do
+      get 'decide'
+    end
   end
 end
