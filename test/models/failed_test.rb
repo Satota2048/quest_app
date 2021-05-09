@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FailedResultsControllerTest < ActionDispatch::IntegrationTest
+class FailedTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

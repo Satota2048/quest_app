@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get 'yet_list'
       get 'doing_list'
     end
-    resources :quest_success_results, only: [:index,:create]
-    resources :quest_failed_results, only: [:index,:create]
+    resources :successes, only: [:index,:create]
+    resources :faileds,  only: [:index,:create]
   end
 end
