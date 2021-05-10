@@ -1,9 +1,12 @@
 class FailedsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_params, only: [:index]
-  before_action :failed_params, only: [:index]
+  before_action :set_params, only: [:index,:new]
+  before_action :failed_params, only: [:index,:new]
 
   def index
+  end
+
+  def new
   end
 
   def create

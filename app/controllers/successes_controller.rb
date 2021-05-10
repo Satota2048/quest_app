@@ -1,9 +1,12 @@
 class SuccessesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_params, only: [:index]
-  before_action :success_params, only: [:index]
+  before_action :set_params, only: [:index,:new]
+  before_action :success_params, only: [:index,:new]
 
   def index
+  end
+
+  def new
   end
 
   def create

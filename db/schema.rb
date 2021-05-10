@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_165507) do
   create_table "faileds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "quest_id", null: false
+    t.integer "failed_reason_id", null: false
     t.text "reason"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
