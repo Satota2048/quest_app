@@ -65,7 +65,7 @@
       <%= link_to "削除", quest_path, method: :delete, class:"destroy-btn", data: {confirm: "削除しますか？"}  %>
     <% end %>
   </div>
-  <% if @quest.checker_id == 3 %>
+  <% if @quest.checker_id == 3 && @quest.success.blank? %>
     <div class="shift-btns">
       <%= link_to '達成登録', new_quest_success_path(@quest.id),class: "shift-btn"%>
       <%= link_to '失敗登録', new_quest_failed_path(@quest.id),class: "shift-btn"%>
