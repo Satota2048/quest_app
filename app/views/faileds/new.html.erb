@@ -1,0 +1,18 @@
+失敗
+<div class="failed-form">
+  <div class="failed-data">
+    <div><%= @quest.title%></div>
+    <div><%= @quest.limit%></div>
+  </div>
+
+    <%= form_with  model: @failed,url: quest_faileds_path, local: true do |f| %>
+      <div class="failed-field">
+        <%= f.collection_select(:failed_reason_id, FailedReason.all, :id, :name, {}, {class:"failed-box", id:"quest-checker"})%>
+        <div class="weight-bold-text">備考</div>
+        <%= f.text_area :reason, class:"reason-text", id:"reasons-name", placeholder:"後で見返す用に、必要であれば利用してください(400文字)。",maxlength:"400" %>
+        <%= f.submit "決定する" , class:"failed-btn" %>
+        <%= link_to 'もどる', '/', class: "back-btn"%>
+      </div>
+    <% end %>
+
+</div>

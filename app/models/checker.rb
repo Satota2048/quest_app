@@ -1,12 +1,12 @@
 class Checker < ActiveHash::Base
   self.data = [
-    { id: 1, name: '作成のみ' },
-    { id: 2, name: '受注' },
-    { id: 3, name: '達成！' },
-    { id: 4, name: 'リタイア……'},
+    { id: 1, name: '--' },
+    { id: 2, name: '作成のみ' },
+    { id: 3, name: '受注'},
   ]  
 
   include ActiveHash::Associations
-  has_many :quests
+  has_many :quest_success_results
+  has_many :quest_failed_results
 
 end
