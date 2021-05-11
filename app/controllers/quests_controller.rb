@@ -6,6 +6,7 @@ class QuestsController < ApplicationController
 
   def index
     @quests = Quest.all.order("created_at DESC")
+    @success = Success.all.order("created_at DESC")
   end
 
   def new

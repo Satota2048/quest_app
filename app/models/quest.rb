@@ -2,6 +2,8 @@ class Quest < ApplicationRecord
 
   belongs_to :user
   has_one_attached :image
+  has_one :success
+  has_one :failed
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category

@@ -3,7 +3,7 @@
   <div><%= @quest.title%></div>
   <div><%= @quest.limit%></div>
 
-  <%= form_with  model: @failed,url: quest_faileds_path, local: true do |f| %>
+  <%= form_with  model: @success,url: quest_successes_path, local: true do |f| %>
     <div class="failed-field">
       <div class="weight-bold-text">備考</div>
       <%= f.text_area :reason, class:"reason-text", id:"reasons-name", placeholder:"後で見返す用に、必要であれば利用してください(400文字)。",maxlength:"400" %>
