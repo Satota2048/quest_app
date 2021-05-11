@@ -3,10 +3,11 @@ class QuestsController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :set_params, only: [:show,:edit,:update,:destroy]
   before_action :check, only: [:edit,:destroy]
+  # before_action :second_check
 
   def index
     @quests = Quest.all.order("created_at DESC")
-    @success = Success.all.order("created_at DESC")
+    # @successes = Success.all.order("created_at DESC")
   end
 
   def new
@@ -67,5 +68,11 @@ class QuestsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  # def second_check
+  #   if @quest.success.present? || @quest.failed.present?
+  #     redirect_to root_path
+  #   end
+  # end
 
 end
