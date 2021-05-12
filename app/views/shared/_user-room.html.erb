@@ -96,7 +96,7 @@
             <ul class='quest-lists'>
               <% @quests.each do |quest| %>
                 <%# 本人のクエストのみ表示 %>
-                <% if quest.success.present? && current_user.id == quest.user_id && quest.checker_id == 3 %>
+                <% if quest.success.present? && quest.failed.blank? && current_user.id == quest.user_id && quest.checker_id == 3 %>
                   <%= link_to quest_path(quest)  do%>
                     <div class='quest-content'>
                       <h5 class='quest-category'>
@@ -128,19 +128,13 @@
       <div class='list'>
         <li>
           <div class="list-name">
-            <%= link_to 'クエストログ', '#'%>
+            <%= link_to 'クエストログ(作成のみ)', '#'%>
           </div>
-          <%= Time.zone.now.to_s(:datetime_jp) %>
+          <%# <%= Time.zone.now.to_s(:datetime_jp) %>
           未実装
           <% @quests.each do |quest| %>
             <div><%= quest.created_at.to_s(:datetime_jp) %></div>
-            <% if %>
-              <div><%= quest.title%>作成</div>
-            <% elsif %>
-              <div><%= quest.title%>作成</div>
-            <% else %>
-              <div><%= quest.title%>作成</div>
-            <% end %>
+            <div><%= quest.title %>作成</div>
           <% end %>
         </li>
       </div>

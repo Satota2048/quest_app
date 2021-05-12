@@ -6,7 +6,7 @@
   <ul class='yet-quest-lists'>
     <% @quests.each do |quest| %>
       <%# 本人のクエストのみ表示 %>
-      <% if quest.success.present? && current_user.id == quest.user_id && quest.checker_id == 3 %>
+      <% if quest.success.present? && quest.failed.blank? && current_user.id == quest.user_id && quest.checker_id == 3 %>
         <%= link_to quest_path(quest.id)  do%>
           <div class='yet-quest-content'>
             <h5 class='quest-category'>
