@@ -18,33 +18,29 @@
           <ul class='quest-lists'>
             <% @quests.each do |quest| %>
               <%# 本人のクエストのみ表示 %>
-              <% if current_user.id == quest.user_id %>
-                <%# <li class='ichiran-list'> %>
-                  <%= link_to quest_path(quest.id)  do%>
-                    <% if quest.checker_id == 2 %>
-                      <div class='quest-content'>
-                        <h5 class='quest-category'>
-                          <%= quest.category.name%>
-                        </h5>
-                        <h3 class='quest-title'>
-                          <%= quest.title %>
-                        </h3>
-                        <% if quest.image.present? %>
-                          <%= image_tag quest.image, class: "quest-image" %>
-                        <% else %>
-                          <%= image_tag "no-image.png",class:"quest-image"%>
-                        <% end %>
-                        <h4 class='quest-explain'>
-                          <%= quest.explain %>
-                        </h4>
-                        <h5 class='quest-limit'>
-                          期限：<%= quest.limit %> 
-                          <% if quest.limit_time.present? %>時刻: <%= quest.limit_time%><% end %>
-                        </h5>
-                      </div>
+              <% if current_user.id == quest.user_id && quest.checker_id == 2 && quest.success.blank? && quest.failed.blank? %>
+                <%= link_to quest_path(quest.id)  do%>
+                  <div class='quest-content'>
+                    <h5 class='quest-category'>
+                      <%= quest.category.name%>
+                    </h5>
+                    <h3 class='quest-title'>
+                      <%= quest.title %>
+                    </h3>
+                    <% if quest.image.present? %>
+                      <%= image_tag quest.image, class: "quest-image" %>
+                    <% else %>
+                      <%= image_tag "no-image.png",class:"quest-image"%>
                     <% end %>
-                  <% end %>
-                <%# </li> %>
+                    <h4 class='quest-explain'>
+                      <%= quest.explain %>
+                    </h4>
+                    <h5 class='quest-limit'>
+                      期限：<%= quest.limit %> 
+                      <% if quest.limit_time.present? %>時刻: <%= quest.limit_time%><% end %>
+                    </h5>
+                  </div>
+                <% end %>
               <% end %>
               <%# 本人のクエストのみ表示 %>
             <% end%>
@@ -61,32 +57,28 @@
             <ul class='quest-lists'>
               <% @quests.each do |quest| %>
                 <%# 本人のクエストのみ表示 %>
-                <% if current_user.id == quest.user_id && quest.success.blank? %>
-                  <li class='ichiran-list'>
-                    <%= link_to quest_path(quest)  do%>
-                      <% if quest.checker_id == 3 %>
-                        <div class='quest-content'>
-                          <h5 class='quest-category'>
-                            <%= quest.category.name%>
-                          </h5>
-                          <h3 class='quest-title'>
-                            <%= quest.title %>
-                          </h3>
-                          <% if quest.image.present? %>
-                            <%= image_tag quest.image, class: "quest-image" %>
-                          <% else %>
-                            <%= image_tag "no-image.png",class:"quest-image"%>
-                          <% end %>
-                          <h4 class='quest-explain'>
-                            <%= quest.explain %>
-                          </h4>
-                          <h5 class='quest-limit'>
-                            期限：<%= quest.limit %> 時刻: <%= quest.limit_time%>
-                          </h5>
-                        </div>
+                <% if current_user.id == quest.user_id && quest.success.blank? && quest.failed.blank? && quest.checker_id == 3 %>
+                  <%= link_to quest_path(quest)  do%>
+                    <div class='quest-content'>
+                      <h5 class='quest-category'>
+                        <%= quest.category.name%>
+                      </h5>
+                      <h3 class='quest-title'>
+                        <%= quest.title %>
+                      </h3>
+                      <% if quest.image.present? %>
+                        <%= image_tag quest.image, class: "quest-image" %>
+                      <% else %>
+                        <%= image_tag "no-image.png",class:"quest-image"%>
                       <% end %>
-                    <% end %>
-                  </li>
+                      <h4 class='quest-explain'>
+                        <%= quest.explain %>
+                      </h4>
+                      <h5 class='quest-limit'>
+                        期限：<%= quest.limit %> 時刻: <%= quest.limit_time%>
+                      </h5>
+                    </div>
+                  <% end %>
                 <% end %>
                 <%# /本人のクエストのみ表示 %>
               <% end%>
@@ -100,44 +92,38 @@
           <div class="list-name">
             <%= link_to '達成済みクエスト', success_list_quests_path %>
           </div>
-          <%# checker.idの値によって表示変更 %>
           <div class='quest-contents'>
             <ul class='quest-lists'>
               <% @quests.each do |quest| %>
                 <%# 本人のクエストのみ表示 %>
-                <% if quest.success.present? && current_user.id == quest.user_id %>
-                  <li class='ichiran-list'>
-                    <%= link_to quest_path(quest)  do%>
-                      <% if quest.checker_id == 3 %>
-                        <div class='quest-content'>
-                          <h5 class='quest-category'>
-                            <%= quest.category.name%>
-                          </h5>
-                          <h3 class='quest-title'>
-                            <%= quest.title %>
-                          </h3>
-                          <% if quest.image.present? %>
-                            <%= image_tag quest.image, class: "quest-image" %>
-                          <% else %>
-                            <%= image_tag "no-image.png",class:"quest-image"%>
-                          <% end %>
-                          <h4 class='quest-explain'>
-                            <%= quest.explain %>
-                          </h4>
-                          <h5 class='quest-limit'>
-                            期限：<%= quest.limit %> 時刻: <%= quest.limit_time%>
-                          </h5>
-                        </div>
+                <% if quest.success.present? && current_user.id == quest.user_id && quest.checker_id == 3 %>
+                  <%= link_to quest_path(quest)  do%>
+                    <div class='quest-content'>
+                      <h5 class='quest-category'>
+                        <%= quest.category.name%>
+                      </h5>
+                      <h3 class='quest-title'>
+                        <%= quest.title %>
+                      </h3>
+                      <% if quest.image.present? %>
+                        <%= image_tag quest.image, class: "quest-image" %>
+                      <% else %>
+                        <%= image_tag "no-image.png",class:"quest-image"%>
                       <% end %>
-                    <% end %>
-                  </li>
+                      <h4 class='quest-explain'>
+                        <%= quest.explain %>
+                      </h4>
+                      <h5 class='quest-limit'>
+                        期限：<%= quest.limit %> 時刻: <%= quest.limit_time%>
+                      </h5>
+                    </div>
+                  <% end %>
                 <% end %>
                 <%# /本人のクエストのみ表示 %>
               <% end%>
             </ul>
           </div>
         </li>
-        <%# /checker.idの値によって表示変化 %>
       </div>
       <div class='list'>
         <li>
@@ -145,10 +131,16 @@
             <%= link_to 'クエストログ', '#'%>
           </div>
           <%= Time.zone.now.to_s(:datetime_jp) %>
-          実装中
+          未実装
           <% @quests.each do |quest| %>
-          <div><%= quest.created_at.to_s(:datetime_jp) %></div>
-          <div><%= quest.title%>作成</div>
+            <div><%= quest.created_at.to_s(:datetime_jp) %></div>
+            <% if %>
+              <div><%= quest.title%>作成</div>
+            <% elsif %>
+              <div><%= quest.title%>作成</div>
+            <% else %>
+              <div><%= quest.title%>作成</div>
+            <% end %>
           <% end %>
         </li>
       </div>
