@@ -144,8 +144,12 @@
           <div class="list-name">
             <%= link_to 'クエストログ', '#'%>
           </div>
-          <%= Time.zone.now %>
-          未実装
+          <%= Time.zone.now.to_s(:datetime_jp) %>
+          実装中
+          <% @quests.each do |quest| %>
+          <div><%= quest.created_at.to_s(:datetime_jp) %></div>
+          <div><%= quest.title%>作成</div>
+          <% end %>
         </li>
       </div>
       <div class='list'>
