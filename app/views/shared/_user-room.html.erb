@@ -134,16 +134,16 @@
           未実装
           <% @quests.each do |quest| %>
             <div><%= quest.created_at.to_s(:datetime_jp) %></div>
-            <div><%= quest.title %>作成</div>
+            <div>『<%= quest.title %>』作成</div>
             <% if quest.created_at != quest.updated_at %>
               <div><%= quest.updated_at.to_s(:datetime_jp) %></div>
-              <div><%= quest.title %>変更</div>
+              <div>『<%= quest.title %>』変更</div>
             <% elsif quest.success.present? &&  %>
               <div><%= quest.success.created_at.to_s(:datetime_jp) %></div>
-              <div><%= quest.title %>達成</div>
+              <div>『<%= quest.title %>』達成</div>
             <% elsif quest.failed.present? %>
               <div><%= quest.failed.created_at.to_s(:datetime_jp) %></div>
-              <div><%= quest.title %>失敗</div>
+              <div>『<%= quest.title %>』失敗</div>
             <% end %>
           <% end %>
         </li>

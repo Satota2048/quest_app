@@ -39,7 +39,7 @@ class QuestsController < ApplicationController
 
   def update
     if @quest.update(quest_params)
-      flash[:notice] = "変更されました"
+      flash[:notice] = "クエスト『#{@quest.title}』が変更されました"
         redirect_to root_path
     else
       render :edit
