@@ -18,4 +18,12 @@ class Quest < ApplicationRecord
     validates :checker_id
   end
 
+  validate :date_before_start
+
+  def date_before_start
+    if limit < Date.today
+      errors.add(:limit, "-- 期限は今日以降のものを選択してください")
+    end
+  end
+
 end
