@@ -6,7 +6,8 @@
 ## URL
 https://quest-app-34998.herokuapp.com/
 
-http://35.72.231.221/　←現在エラー解決中
+http://35.72.231.221/　
+←現在エラー解決中
 
 ## basic-auth 
 
