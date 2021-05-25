@@ -21,8 +21,10 @@ class Quest < ApplicationRecord
   validate :date_before_start
 
   def date_before_start
-    if limit < Date.today
+    if limit <= Date.today && limit_time.blank?
       errors.add(:limit, "-- 期限は今日以降のものを選択してください")
+    elsif limit == Date.today && limit_time < Time.now.to_s
+      errors.add(:limit, "-- 当日中の期限は、現在時刻以降のものを選択してください")
     end
   end
 
