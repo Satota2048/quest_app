@@ -1,6 +1,10 @@
 # アプリケーション名
 「QUEST」
 
+# サンプル画像
+
+![サンプル画像]https://github.com/Satota2048/quest_app/blob/master/QUEST%E3%82%A2%E3%83%95%E3%82%9A%E3%83%AA%E7%94%BB%E5%83%8F.jpeg
+
 # アプリケーション概要
 身近なものから、将来の夢まで。どんな内容でも利用することができるToDoアプリです。
 
